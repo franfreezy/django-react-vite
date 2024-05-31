@@ -8,7 +8,7 @@ function App() {
   const reactLogo ='/static/react.svg'
   const viteLogo ='/static/vite.svg'
   const djangoLogo='/static/django.svg'
-  const graphLogo='/static/GraphQL_Logo.svg'
+  const graphLogo='/static/graph.png'
 
 
   return (
