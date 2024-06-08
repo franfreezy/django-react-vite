@@ -1,5 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from frontend.models import user
 
 # Create your views here.
 def frontpage(request):
     return render(request, "integration.html")
+
+
+from .forms import PostForm
+
+def create_post(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('frontpage')  # url to integration.html
+    else:
+        form = PostForm()
+    return render(request, 'home.html', {'form': form})

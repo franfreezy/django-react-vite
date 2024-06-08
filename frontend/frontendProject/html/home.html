@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>freezy farms and food</title>
+    <title>home</title>
     <script type="module">
         import RefreshRuntime from 'http://localhost:5173/@react-refresh'
         RefreshRuntime.injectIntoGlobalHook(window)
@@ -17,8 +17,13 @@
     <script type="module" src="http://localhost:5173/src/main.jsx"></script>
 </head>
 <body>
-    <div id="root">
-    
+    <div id="root2">
+        <h1>sign in</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
     </div>
 </body>
 </html>
