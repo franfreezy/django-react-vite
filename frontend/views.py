@@ -13,7 +13,7 @@ def create_post(request):
         form = PostForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('frontpage')  # url to integration.html
+            return redirect('../../frontend/')  # url to integration.html
     else:
         form = PostForm()
     return render(request, 'home.html', {'form': form})
