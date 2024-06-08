@@ -8,7 +8,7 @@ def frontpage(request):
 
 from .forms import PostForm
 
-def create_post(request):
+def create_user(request):
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
